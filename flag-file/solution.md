@@ -1,0 +1,1 @@
+The fetcher accepts arbitrary URL schemes and performs the request on the server. file:///flag.txt is treated as a valid URL and read from the container filesystem, so the player can retrieve the flag without needing shell access. Restricting the allowed schemes to http: and https: would prevent this local file read.

